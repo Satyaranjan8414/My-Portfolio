@@ -1,0 +1,21 @@
+.buttonComponent {
+	/* width: 200px; */
+	padding: 20px 30px;
+	margin: 10px 0;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	transition: all 0.3s ease-in-out;
+	background: linear-gradient(-135deg, #7f1adf 0%, #e7a41f 100%);
+}
+.buttonComponent span {
+	font-size: 18px;
+	display: inline-block;
+	font-weight: 500 !important;
+	letter-spacing: 0.95px;
+	font: 17px/32px 'Roboto', sans-serif;
+}
+.buttonComponent:hover {
+	border-radius: 36px;
+	background: linear-gradient(-135deg, #982dfb 0%, #f1ae26 100%);
+}

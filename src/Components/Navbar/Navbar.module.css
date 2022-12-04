@@ -1,0 +1,146 @@
+.navContainer {
+  width: 100%;
+  padding: 15px;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  transition: top 0.6s;
+}
+.logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.logo img {
+  position: absolute;
+  width: 45px;
+  border-radius: 40px;
+  animation: revolve 2s infinite;
+}
+
+@keyframes revolve {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    /* width: 200px;
+		opacity: 0; */
+  }
+}
+.navbar {
+  width: 80%;
+  margin: auto 10%;
+  height: fit-content;
+
+  display: flex;
+  /* opacity: .4; */
+  justify-content: space-between;
+  align-items: center;
+}
+.links {
+  width: fit-content;
+  
+}
+.links a {
+  margin: 0 15px;
+  transition: 0.4s;
+  display: inline-block;
+  /* color: #000; */
+  text-decoration: none;
+  margin: 0 50px;
+  font-size: 20px;
+  
+}
+.links a:hover {
+  color: #00a0a0;
+}
+.links a::after {
+  content: "";
+  display: block;
+  width: 0;
+  margin-top: 5px;
+  height: 2px;
+  background: #00a0a0;
+  transition: width 0.4s;
+}
+.links a:hover::after {
+  width: 100%;
+}
+.modeButton {
+  font-size: 30px;
+  border: none;
+  background: none;
+  transform: 0.5s;
+}
+.bars {
+  position: relative;
+  /* width: 50px; */
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 99;
+  cursor: pointer;
+}
+.bars div {
+  width: 30px;
+  height: 5px;
+  margin: 2px;
+  background: #03b8d8;
+  border-radius: 2.5px;
+  transition: 1s;
+  transform-origin: left;
+}
+
+.circle {
+  position: relative;
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+  margin: auto;
+  transition: 0.6s;
+}
+.crescent {
+  position: absolute;
+  border-radius: 100%;
+  right: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: white;
+  transform: scale(0);
+  transform-origin: top right;
+  transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+@media screen and (max-width: 850px) {
+  .links a {
+    margin: 0px 17px;
+    transition: 0.3s;
+  }
+}
+@media screen and (max-width: 650px) {
+  .navContainer {
+    padding: 8px;
+  }
+  .logo img {
+    position: relative;
+  }
+  .links {
+    display: none;
+  }
+  .bars {
+    display: flex;
+  }
+  .modeButton {
+    font-size: 25px;
+  }
+  .bars div {
+    width: 25px;
+
+    height: 4px;
+    border-radius: 2px;
+  }
+}

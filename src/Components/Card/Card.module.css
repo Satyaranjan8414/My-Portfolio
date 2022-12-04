@@ -1,0 +1,262 @@
+.card {
+	width: 70%;
+	margin: 50px auto;
+	padding: 20px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	/* align-items: center; */
+	border-radius: 15px;
+	backdrop-filter: blur(5px);
+	opacity: 0.8;
+
+}
+
+.card__Container {
+	width: 90%;
+	/* min-height: 80px; */
+	display: flex;
+	position: relative;
+}
+.image {
+	width: 100%;
+	margin-right: 20px;
+	position: relative;
+}
+.image img {
+	width: 100%;
+	height: 300px;
+	border-radius: 10px 0 0 10px;
+}
+.colorDiv {
+	width: 100%;
+	height: 300px;
+	background: #37687c;
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	opacity: 0.6;
+	border-radius: 10px 0 0 10px;
+	transition: 0.5s;
+}
+.image:hover .colorDiv {
+	opacity: 0;
+}
+
+.card .card__Container .description {
+	width: 130px;
+	padding: 15px;
+	border-radius: 20px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	z-index: 16;
+	right: 85%;
+	top: -30%;
+	opacity: 0;
+	transform: translateX(0);
+	transition: 0.5s;
+}
+
+.card:hover .card__Container .description {
+	width: 40%;
+	opacity: 1;
+	top: 80%;
+	right: 80%;
+	backdrop-filter: blur(20px);
+}
+
+.titleContainer {
+	text-align: justify;
+}
+
+.description i {
+	font-size: 30px;
+	transition: 0.3s;
+}
+.description i:hover {
+	transform: translateY(-5px);
+}
+.popupTech {
+	display: flex;
+	flex-wrap: wrap;
+}
+.actionBtns a:last-child {
+	margin-left: 20px;
+}
+@media screen and (max-width: 1370px) {
+	.card {
+		width: 80vw;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.card {
+		width: 85vw;
+	}
+}
+@media screen and (max-width: 1000px) {
+	.card {
+		width: 85vw;
+	}
+	.card__Container {
+		height: 180px;
+		transform: translateY(20px);
+	}
+	.image img,
+	.colorDiv {
+		height: 250px;
+		width: 120%;
+	}
+	.colorDiv {
+		display: none;
+	}
+	.titleContainer {
+		height: 230px;
+		opacity: 0.8;
+		padding: 10px;
+		position: absolute;
+		bottom: 25px;
+		width: 130%;
+		right: 0;
+		margin-top: -20px;
+		z-index: 15;
+		border-radius: 10px;
+		text-align: justify;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	.titleContainer p {
+		width: 90%;
+		max-height: 150px;
+		overflow: hidden;
+		margin-top: -20px;
+		/* background: chocolate; */
+	}
+	.titleContainer div {
+		width: 90%;
+		display: flex;
+		flex-wrap: wrap;
+		/* word-break: break-all; */
+	}
+	.card .card__Container .description {
+		width: 60%;
+		position: absolute;
+		background: none;
+		padding: 10px 5px;
+		z-index: 16;
+		right: 10%;
+		opacity: 0.9;
+		top: 90%;
+		transform: translateX(0);
+		transition: 0.5s;
+		justify-content: space-around;
+		align-items: center;
+		text-align: center;
+	}
+	.card:hover .card__Container .description {
+		width: 60%;
+		opacity: 0.9;
+		top: 90%;
+		right: 10%;
+	}
+	.description_container {
+		opacity: 1;
+		padding: 10px 20px;
+		font-size: 25px;
+	}
+	.description i {
+		font-size: 25px;
+	}
+}
+.dialogElements {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.dialogElements div {
+	width: 65%;
+	display: flex;
+	flex-wrap: wrap;
+}
+@media screen and (min-width: 800px) {
+	.card {
+		align-items: center;
+	}
+}
+@media screen and (max-width: 800px) {
+	.card {
+		width: 80vw;
+		background: none !important;
+		box-shadow: none !important;
+		padding: 0;
+		margin: 30px auto !important;
+		flex-direction: column;
+	}
+	.card__Container {
+		height: fit-content !important;
+		width: 100%;
+	}
+	.image img {
+		height: fit-content !important;
+		border: 2px solid rgb(163, 163, 163);
+		border-radius: 10px !important;
+		width: 100%;
+		max-height: 250px;
+	}
+
+	.titleContainer {
+		position: relative;
+		width: 100%;
+		height: fit-content !important;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-top: 20px;
+		padding: 0 !important;
+		font-size: 13px;
+		background: none !important;
+	}
+
+	.card:hover .card__Container {
+		opacity: 1;
+		width: 100%;
+	}
+
+	.card .card__Container .description,
+	.titleContainer p,
+	.titleContainer div,
+	.colorDiv {
+		display: none;
+	}
+
+	.card:hover .card__Container .description {
+		width: 100px;
+		right: 50%;
+		transform: translateX(50%);
+		top: 80%;
+	}
+	.description_container {
+		width: 60px;
+		border-radius: 15px;
+		padding-left: 10px;
+		margin: auto;
+		display: flex;
+		justify-content: space-between;
+		font-size: 20px;
+	}
+	.description i {
+		margin-right: 0;
+	}
+}
+@media screen and (max-width: 500px) {
+	.card {
+		width: 90%;
+	}
+	.titleContainer h2 {
+		width: 40%;
+		text-align: justify;
+	}
+}

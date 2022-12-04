@@ -1,0 +1,71 @@
+.logoStart {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.logoStart img {
+	width: 100px;
+	animation: revolve 0.8s infinite;
+}
+.ts_logo{
+	border-radius: 100%;
+	padding: -50%;
+}
+
+
+@keyframes revolve {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+		/* width: 200px;
+		opacity: 0; */
+	}
+}
+.components {
+	text-align: center;
+	animation: wakeup 1s;
+}
+/* @keyframes wakeup {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+} */
+button {
+	cursor: pointer;
+	outline: none;
+}
+.links {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 25px;
+	z-index: 5;
+	font-weight: 700;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	transition: 0.5s;
+}
+.links a {
+	margin: 20px;
+}
+a:hover {
+	color: #00a0a0;
+}
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+	/* background: rgb(16, 22, 48); */
+}
+::-webkit-scrollbar-thumb {
+	cursor: pointer;
+	background: #fbbd41;
+}
